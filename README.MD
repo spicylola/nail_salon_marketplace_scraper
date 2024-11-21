@@ -57,3 +57,5 @@ This application collects and stores data about nail salons from Google Maps in 
    ```bash
    git clone https://github.com/yourusername/nail-salon-marketplace-scraper.git
    cd nail-salon-marketplace-scraper
+   python3 -m venv venv
+   pip3 install -r requirements.txt

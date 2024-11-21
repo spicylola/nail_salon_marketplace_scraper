@@ -1,0 +1,3 @@
+from nail_salon_marketplace_scraper.models.excel_requests import ExcelRequest
+from nail_salon_marketplace_scraper.models.nail_salons import NailSalon
+from nail_salon_marketplace_scraper.models.users import User

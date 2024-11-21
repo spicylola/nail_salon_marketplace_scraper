@@ -1,11 +1,13 @@
 import os
 import requests
 import json
+from nail_salon_marketplace_scraper import app
 
 # Your Google Places API key
-API_KEY = os.getenv('API_KEY')
+#API_KEY = os.getenv('API_KEY')
+API_KEY = app.config["GOOGLE_MAPS_API_KEY"]
 
-def get_places(query, page_size=5):
+def get_places(query, page_size=50):
     """
     Searches for places based on a text query and returns a list of place IDs.
     https://developers.google.com/maps/documentation/places/web-service/place-details
@@ -59,6 +61,7 @@ def get_place_details(place_id):
     response = requests.get(place_info_url, headers=headers)
     if response.status_code == 200:
         place_info = response.json()
+        breakpoint()
         return place_info
     else:
         # TODO: SETUP MONITORING
