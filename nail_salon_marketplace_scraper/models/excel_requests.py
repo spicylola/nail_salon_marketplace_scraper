@@ -1,4 +1,4 @@
-from nail_salon_marketplace_scraper.app import db
+from nail_salon_marketplace_scraper.app_init import db
 from sqlalchemy.sql import func
 
 class ExcelRequest(db.Model):
